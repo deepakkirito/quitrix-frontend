@@ -30,7 +30,10 @@ function Plot() {
     const alertTag = useRef();
 
     useEffect(() => {
+        alertTag.current.innerText = 'Loading...';
+            setAlert(true);
         axios.get(baseUrl).then(response => {
+            setAlert(false);
             setPlotData(response.data.data1);
             setGraphData(response.data.data2);
         })
@@ -66,7 +69,6 @@ function Plot() {
     })
 
     socket.on('add-broadcast', data => {
-        console.log(data);
         setRefresh(true);
         setTimeout(() => {
             setRefresh(false);
