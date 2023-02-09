@@ -34,7 +34,7 @@ function Plot() {
     }, [plotData])
 
     useEffect(() => {
-        alertTag.current.innerText = 'Loading...';
+        alertTag.current.innerText = 'Loading... Can take upto 30 sec or try refresh in 30 sec ';
             setAlert(true);
         axios.get(baseUrl).then(response => {
             setAlert(false);
