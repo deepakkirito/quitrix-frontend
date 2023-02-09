@@ -14,9 +14,9 @@ import socketClient from 'socket.io-client';
 import classes from '../styles/plot.module.scss';
 
 
-const socketUrl = 'http://localhost:4000';
+const socketUrl = 'quitrix-plot.onrender.com';
 const socket = socketClient(socketUrl);
-const baseUrl = 'http://localhost:4000/plot';
+const baseUrl = 'https://quitrix-plot.onrender.com/plot';
 
 
 
