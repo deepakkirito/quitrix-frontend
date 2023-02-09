@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import classes from '../styles/video.module.scss'
 
-const baseUrl = 'http://localhost:4000/video';
+const baseUrl = 'https://quitrix-plot.onrender.com/video';
 
 function Video() {
 
