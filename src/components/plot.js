@@ -30,7 +30,7 @@ function Plot() {
     const alertTag = useRef();
     
      useEffect(() => {
-        console.log(clear());
+        console.clear();
     }, [plotData])
 
     useEffect(() => {
