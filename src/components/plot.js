@@ -28,6 +28,10 @@ function Plot() {
     const [alert, setAlert] = useState(false);
     const [refresh, setRefresh] = useState(false);
     const alertTag = useRef();
+    
+     useEffect(() => {
+        console.log(clear());
+    }, [plotData])
 
     useEffect(() => {
         alertTag.current.innerText = 'Loading...';
