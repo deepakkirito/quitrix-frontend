@@ -97,8 +97,11 @@ function Plot() {
                 setAlert(false);
             }, 5000);
         } else {
+            alertTag.current.innerText = 'Loading...';
+            setAlert(true);
             axios.post(baseUrl, addPlot).then(response => {
                 if (response.data === 'Data Saved') {
+                    setAlert(false);
                     setRefresh(true);
                     setTimeout(() => {
                         setRefresh(false);
